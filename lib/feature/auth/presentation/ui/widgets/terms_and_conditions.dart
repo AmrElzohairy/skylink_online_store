@@ -3,17 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rika_online_store/core/utils/app_colors.dart';
 import 'package:rika_online_store/core/utils/app_styles.dart';
 
-// ignore: must_be_immutable
-class TermsAndConditions extends StatefulWidget {
-  TermsAndConditions({super.key, required this.termsAccepted});
+class TermsAndConditions extends StatelessWidget {
+  final void Function(bool?) onChanged;
+  final bool value;
 
-  bool termsAccepted;
-
-  @override
-  State<TermsAndConditions> createState() => _TermsAndConditionsState();
-}
-
-class _TermsAndConditionsState extends State<TermsAndConditions> {
+  const TermsAndConditions({
+    super.key,
+    required this.onChanged,
+    required this.value,
+  });
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -24,12 +22,8 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(7.r),
           ),
-          value: widget.termsAccepted,
-          onChanged: (value) {
-            setState(() {
-              widget.termsAccepted = value!;
-            });
-          },
+          value: value,
+          onChanged: onChanged,
         ),
         Text(
           'By signing up, you agree to our \nTerms & Conditions and Privacy Policy',
