@@ -14,7 +14,6 @@ class RikaStore extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Rika Store',
-      theme: ThemeData(),
       routerConfig: router,
     );
   }
