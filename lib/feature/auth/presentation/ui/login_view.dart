@@ -78,7 +78,14 @@ class _LoginViewState extends State<LoginView> {
               const VerticalSpace(height: 70),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 23.w),
-                child: MainButton(buttonText: 'Login', onPressed: () {}),
+                child: MainButton(
+                  buttonText: 'Login',
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      context.pushNamed(AppRoutes.home);
+                    }
+                  },
+                ),
               ),
               const VerticalSpace(height: 20),
               const OrWidget(),

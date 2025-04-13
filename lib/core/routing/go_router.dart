@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:rika_online_store/core/routing/app_routes.dart';
+import 'package:rika_online_store/feature/Home/presentation/ui/home_view.dart';
 import 'package:rika_online_store/feature/auth/presentation/ui/login_view.dart';
 import 'package:rika_online_store/feature/auth/presentation/ui/sign_up_view.dart';
 
@@ -16,6 +17,11 @@ final router = GoRouter(
       path: AppRoutes.signUp,
       name: AppRoutes.signUp,
       builder: (context, state) => const SignUpView(),
+    ),
+    GoRoute(
+      path: AppRoutes.home,
+      name: AppRoutes.home,
+      builder: (context, state) => const HomeView(),
     ),
   ],
 );
