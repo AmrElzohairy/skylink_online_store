@@ -17,7 +17,7 @@ class SignUpCubit extends Cubit<SignUpState> {
         emit(SignUpFailure(failure.message));
       },
       (success) {
-        emit(SignUpSuccess(success));
+        emit(const SignUpSuccess());
       },
     );
   }

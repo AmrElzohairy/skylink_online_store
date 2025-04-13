@@ -20,10 +20,10 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  Future<Either<Failure, String>> signUp(SignUpBody signUpBody) async {
+  Future<Either<Failure, void>> signUp(SignUpBody signUpBody) async {
     try {
       await dio.post(ApiEndpoints.signUp, data: signUpBody.toJson());
-      return const Right("Sign Up Successfully");
+      return const Right(null);
     } on Exception catch (e) {
       if (e is DioException) {
         log("Dio error in signUp method in AuthRepoImpl: $e");
