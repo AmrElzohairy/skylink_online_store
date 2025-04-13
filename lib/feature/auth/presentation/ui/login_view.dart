@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:rika_online_store/core/routing/app_routes.dart';
 import 'package:rika_online_store/core/utils/app_styles.dart';
 import 'package:rika_online_store/core/widgets/custom_text_form_field.dart';
+import 'package:rika_online_store/core/widgets/custom_text_line.dart';
 import 'package:rika_online_store/core/widgets/rika_logo_image.dart';
 import 'package:rika_online_store/feature/auth/presentation/ui/widgets/or_widget.dart';
 
@@ -88,6 +91,14 @@ class _LoginViewState extends State<LoginView> {
                   buttonText: 'Sign in with Google',
                   onPressed: () {},
                 ),
+              ),
+              const VerticalSpace(height: 30),
+              CustomTextLine(
+                actionText: "Sign up",
+                text: "Don't have an account?",
+                onTap: () {
+                  context.pushNamed(AppRoutes.signUp);
+                },
               ),
             ],
           ),
