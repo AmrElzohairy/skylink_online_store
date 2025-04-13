@@ -11,6 +11,7 @@ class RikaStore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Rika Store',
       theme: ThemeData(),
       home: const Scaffold(),
