@@ -23,6 +23,11 @@ class AppStyles {
     fontSize: 20,
     fontWeight: FontWeight.w600,
   );
+  static final TextStyle semiBold16Black = const TextStyle(
+    color: AppColors.black,
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+  );
   static final TextStyle extraBold16White = const TextStyle(
     color: AppColors.white,
     fontSize: 16,
