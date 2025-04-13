@@ -27,7 +27,7 @@ class DioClient {
   }) async {
     try {
       final response = await dio.get(url, queryParameters: queryParameters);
-      return response;
+      return response.data;
     } catch (e) {
       rethrow;
     }
@@ -44,7 +44,7 @@ class DioClient {
         data: data,
         queryParameters: queryParameters,
       );
-      return response;
+        return response.data;
     } catch (e) {
       rethrow;
     }
@@ -61,7 +61,7 @@ class DioClient {
         data: data,
         queryParameters: queryParameters,
       );
-      return response;
+      return response.data;
     } catch (e) {
       rethrow;
     }
