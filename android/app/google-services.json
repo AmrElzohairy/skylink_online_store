@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "223753817709",
+    "project_id": "rika-store-ccc49",
+    "storage_bucket": "rika-store-ccc49.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223753817709:android:4afe10284502cf782cb964",
+        "android_client_info": {
+          "package_name": "com.example.rika_online_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcw9QUD_JVG42MALmFR88WQYWrlFqdKbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
