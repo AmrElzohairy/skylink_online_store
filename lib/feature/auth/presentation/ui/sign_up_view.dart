@@ -29,6 +29,18 @@ class _SignUpViewState extends State<SignUpView> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController =
       TextEditingController();
+
+  @override
+  void dispose() {
+    _firstNameController.dispose();
+    _lasetnameController.dispose();
+    _userNameController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+    _confirmPasswordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -171,21 +183,21 @@ class _SignUpViewState extends State<SignUpView> {
                 child: TermsAndConditions(termsAccepted: termsAccepted),
               ),
               const VerticalSpace(height: 10),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 23.w),
-                child: BlocConsumer<SignUpCubit, SignUpState>(
-                  listener: (context, state) {
-                    if (state is SignUpSuccess) {
-                      context.pop();
-                    }
-                    if (state is SignUpFailure) {
-                      ScaffoldMessenger.of(
-                        context,
-                      ).showSnackBar(SnackBar(content: Text(state.errMessage)));
-                    }
-                  },
-                  builder: (context, state) {
-                    return MainButton(
+              BlocConsumer<SignUpCubit, SignUpState>(
+                listener: (context, state) {
+                  if (state is SignUpSuccess) {
+                    context.pop();
+                  }
+                  if (state is SignUpFailure) {
+                    ScaffoldMessenger.of(
+                      context,
+                    ).showSnackBar(SnackBar(content: Text(state.errMessage)));
+                  }
+                },
+                builder: (context, state) {
+                  return Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 23.w),
+                    child: MainButton(
                       isLoading: state is SignUpLoading ? true : false,
                       buttonText: 'Sign Up',
                       onPressed: () {
@@ -207,9 +219,9 @@ class _SignUpViewState extends State<SignUpView> {
                           );
                         }
                       },
-                    );
-                  },
-                ),
+                    ),
+                  );
+                },
               ),
             ],
           ),
