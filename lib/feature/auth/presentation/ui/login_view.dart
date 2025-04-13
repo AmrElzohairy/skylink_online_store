@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rika_online_store/core/utils/app_images.dart';
+
+import '../../../../core/utils/spacing.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -9,13 +12,13 @@ class LoginView extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 30),
+            const VerticalSpace(height: 30),
             Align(
               alignment: Alignment.topCenter,
               child: Image.asset(
                 Assets.imagesRikaLogo,
-                height: 200,
-                width: 150,
+                height: 200.h,
+                width: 150.w,
               ),
             ),
           ],
