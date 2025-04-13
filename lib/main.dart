@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rika_online_store/core/routing/go_router.dart';
 
 void main() {
@@ -11,10 +12,16 @@ class RikaStore extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      title: 'Rika Store',
-      routerConfig: router,
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder:
+          (_, child) => MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            title: 'Rika Store',
+            routerConfig: router,
+          ),
     );
   }
 }
