@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rika_online_store/feature/auth/data/models/sign_up_body.dart';
-import 'package:rika_online_store/feature/auth/presentation/logic/cubit/sign_up_cubit.dart';
+import 'package:rika_online_store/feature/auth/presentation/logic/sign_up_cubit/sign_up_cubit.dart';
 
 import '../../../../../core/widgets/custom_snac_bar.dart';
 import '../../../../../core/widgets/main_button.dart';

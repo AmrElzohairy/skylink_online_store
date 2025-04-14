@@ -4,7 +4,7 @@ import 'package:rika_online_store/core/routing/app_routes.dart';
 import 'package:rika_online_store/core/utils/service_locator.dart';
 import 'package:rika_online_store/feature/Home/presentation/ui/home_view.dart';
 import 'package:rika_online_store/feature/auth/domain/repo/auth_repo.dart';
-import 'package:rika_online_store/feature/auth/presentation/logic/cubit/sign_up_cubit.dart';
+import 'package:rika_online_store/feature/auth/presentation/logic/sign_up_cubit/sign_up_cubit.dart';
 import 'package:rika_online_store/feature/auth/presentation/ui/login_view.dart';
 import 'package:rika_online_store/feature/auth/presentation/ui/sign_up_view.dart';
 
