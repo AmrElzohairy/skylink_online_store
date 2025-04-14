@@ -13,6 +13,7 @@
 migrate_working_dir/
 api_end_points.dart
 sign_up_body.dart
+user.dart
 
 # IntelliJ related
 *.iml
