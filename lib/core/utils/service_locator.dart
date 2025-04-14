@@ -9,4 +9,5 @@ final getIt = GetIt.instance;
 void setupDependencies() {
   getIt.registerSingleton<DioClient>(DioClient(Dio()));
   getIt.registerSingleton<AuthRepo>(AuthRepoImpl(dio: getIt<DioClient>()));
+
 }
