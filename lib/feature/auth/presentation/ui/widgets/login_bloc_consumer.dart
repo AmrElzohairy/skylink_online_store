@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rika_online_store/core/cache/cache_helper.dart';
 import 'package:rika_online_store/core/routing/app_routes.dart';
 
+import '../../../../../core/cache/cache_constants.dart';
 import '../../../../../core/widgets/custom_snac_bar.dart';
 import '../../../../../core/widgets/main_button.dart';
 import '../../../data/models/sign_in_body.dart';
@@ -33,6 +35,7 @@ class LoginBlocConsumer extends StatelessWidget {
             message: "Login Success",
             contentType: ContentType.success,
           );
+          CacheHelper.set(key: CacheConstants.isLoggedIn, value: true);
           context.goNamed(AppRoutes.home);
         }
         if (state is SignInFailure) {

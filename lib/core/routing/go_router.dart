@@ -1,5 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rika_online_store/core/cache/cache_constants.dart';
+import 'package:rika_online_store/core/cache/cache_helper.dart';
 import 'package:rika_online_store/core/routing/app_routes.dart';
 import 'package:rika_online_store/core/utils/service_locator.dart';
 import 'package:rika_online_store/feature/Home/presentation/ui/home_view.dart';
@@ -11,7 +13,7 @@ import 'package:rika_online_store/feature/auth/presentation/ui/sign_up_view.dart
 
 // GoRouter configuration
 final router = GoRouter(
-  initialLocation: AppRoutes.login,
+  initialLocation: getInitialRoute(),
   routes: [
     GoRoute(
       path: AppRoutes.login,
@@ -38,3 +40,13 @@ final router = GoRouter(
     ),
   ],
 );
+
+getInitialRoute() {
+  bool isLoggedIn =
+      CacheHelper.getBool(key: CacheConstants.isLoggedIn) ?? false;
+  if (isLoggedIn) {
+    return AppRoutes.home;
+  } else {
+    return AppRoutes.login;
+  }
+}
