@@ -23,11 +23,7 @@ class HomeView extends StatelessWidget {
                     VerticalSpace(height: 20),
                     SearchArea(),
                     VerticalSpace(height: 20),
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      physics: BouncingScrollPhysics(),
-                      child: FiltersList(),
-                    ),
+                    FiltersList(),
                   ],
                 ),
               ),

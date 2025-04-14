@@ -26,24 +26,27 @@ class _FiltersListState extends State<FiltersList> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children:
-          categories.map((category) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 2),
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    isSelected = category;
-                  });
-                },
-                child: FilterItem(
-                  category: category,
-                  isSelected: isSelected == category,
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children:
+            categories.map((category) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 2),
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isSelected = category;
+                    });
+                  },
+                  child: FilterItem(
+                    category: category,
+                    isSelected: isSelected == category,
+                  ),
                 ),
-              ),
-            );
-          }).toList(),
+              );
+            }).toList(),
+      ),
     );
   }
 }
