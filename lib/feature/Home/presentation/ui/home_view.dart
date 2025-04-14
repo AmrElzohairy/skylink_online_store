@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rika_online_store/core/utils/spacing.dart';
 import 'package:rika_online_store/feature/Home/presentation/ui/widgets/filters_list.dart';
 import 'package:rika_online_store/feature/Home/presentation/ui/widgets/home_header.dart';
+import 'package:rika_online_store/feature/Home/presentation/ui/widgets/product_sliver_grid_view.dart';
 import 'package:rika_online_store/feature/Home/presentation/ui/widgets/search_area.dart';
 
 class HomeView extends StatelessWidget {
@@ -24,9 +25,11 @@ class HomeView extends StatelessWidget {
                     SearchArea(),
                     VerticalSpace(height: 20),
                     FiltersList(),
+                    VerticalSpace(height: 20),
                   ],
                 ),
               ),
+              ProductSliverGridView(),
             ],
           ),
         ),
