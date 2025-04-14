@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'data.dart';
 
 class SignInResponseModel extends Equatable {
-  final Data? data;
+  final LoginData? data;
 
   const SignInResponseModel({this.data});
 
@@ -12,7 +12,7 @@ class SignInResponseModel extends Equatable {
       data:
           json['data'] == null
               ? null
-              : Data.fromJson(json['data'] as Map<String, dynamic>),
+              : LoginData.fromJson(json['data'] as Map<String, dynamic>),
     );
   }
 

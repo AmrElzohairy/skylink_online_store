@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:rika_online_store/core/cache/cache_helper.dart';
 import 'package:rika_online_store/core/errors/failure.dart';
 import 'package:rika_online_store/core/networking/api_end_points.dart';
 import 'package:rika_online_store/core/networking/dio_client.dart';
@@ -9,6 +10,8 @@ import 'package:rika_online_store/feature/auth/data/models/sign_in_body.dart';
 import 'package:rika_online_store/feature/auth/data/models/sign_up_body.dart';
 import 'package:rika_online_store/feature/auth/domain/entities/user_entity.dart';
 import 'package:rika_online_store/feature/auth/domain/repo/auth_repo.dart';
+
+import '../../../../core/cache/cache_constants.dart';
 
 class AuthRepoImpl extends AuthRepo {
   final DioClient dio;
@@ -21,7 +24,19 @@ class AuthRepoImpl extends AuthRepo {
         ApiEndpoints.login,
         data: signInBody.toJson(),
       );
-      var userData = UserEntity.fromUser(resonse.data);
+      var userData = UserEntity.fromLoginData(resonse.data);
+      CacheHelper.setSecureData(
+        key: CacheConstants.userId,
+        value: userData.id.toString(),
+      );
+      CacheHelper.setSecureData(
+        key: CacheConstants.accssToken,
+        value: userData.accessToken,
+      );
+      CacheHelper.setSecureData(
+        key: CacheConstants.firstName,
+        value: userData.firstName,
+      );
       return Right(userData);
     } on Exception catch (e) {
       if (e is DioException) {
