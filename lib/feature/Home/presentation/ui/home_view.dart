@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rika_online_store/core/utils/spacing.dart';
+import 'package:rika_online_store/feature/Home/presentation/ui/widgets/filters_list.dart';
 import 'package:rika_online_store/feature/Home/presentation/ui/widgets/home_header.dart';
 import 'package:rika_online_store/feature/Home/presentation/ui/widgets/search_area.dart';
 
@@ -21,6 +22,12 @@ class HomeView extends StatelessWidget {
                     HomeHeader(),
                     VerticalSpace(height: 20),
                     SearchArea(),
+                    VerticalSpace(height: 20),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      physics: BouncingScrollPhysics(),
+                      child: FiltersList(),
+                    ),
                   ],
                 ),
               ),
