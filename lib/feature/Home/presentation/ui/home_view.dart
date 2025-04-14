@@ -30,6 +30,7 @@ class HomeView extends StatelessWidget {
                 ),
               ),
               ProductSliverGridView(),
+              SliverToBoxAdapter(child: VerticalSpace(height: 20)),
             ],
           ),
         ),
