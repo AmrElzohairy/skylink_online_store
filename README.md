@@ -1,20 +1,39 @@
-# rika_online_store
-<<<<<<< HEAD
+# 📱 My Flutter App
 
-A new Flutter project.
+This app demonstrates basic authentication and product listing features using clean architecture principles.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🔐 Features Implementation
 
-A few resources to get you started if this is your first Flutter project:
+### **Login Screen**
+- Email and password fields with input validation.
+- Local storage of login information using `SharedPreferences`.
+- Form validation with error messages.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### **Home Screen (Products)**
+- Displays a list of products with name, image, and price.
+- Tapping a product shows more details (can be extended).
+- Product data currently mocked or hardcoded for UI testing.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-online e-commerce 
->>>>>>> 4cfd26207947b351c473ca4799e853eebc16505a
+---
+
+## 🛠️ Technical Requirements Implementation
+
+### **State Management**
+- Used **Bloc pattern** with `Cubit` for managing UI state.
+- Separate Cubits for Authentication and Product modules.
+
+### **API Requests**
+- Using **Dio** for network communication.
+- Mocked API or local JSON currently used during development.
+
+### **Local Storage**
+- Implemented `SharedPreferences` to store user session info.
+
+### **Responsive Design**
+- Adaptive UI using MediaQuery and LayoutBuilder.
+- Proper padding and spacing for multiple screen sizes.
+
+### **Clean Architecture**
+Structured into three main layers:
