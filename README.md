@@ -34,6 +34,14 @@ This app demonstrates basic authentication and product listing features using cl
 
 ---
 
+### 🛍️ Product Details Screen
+
+- Displays detailed information about the selected product.
+- Shows product image, name, price, and description.
+- May include additional information like rating, availability, or category (optional).
+- Data is passed from the Home Screen or fetched based on product ID .
+
+
 ## 🛠️ Technical Requirements Implementation
 
 ### **State Management**
@@ -73,3 +81,7 @@ file:///home/amr-elzohairy/Downloads/Telegram%20Desktop/photo_2025-04-14_18-26-4
 ![photo_2025-04-14_18-23-56](https://github.com/user-attachments/assets/6309fc46-cfca-4b8b-8485-6e12a29f4b56)
 
 ![photo_2025-04-14_18-23-54](https://github.com/user-attachments/assets/1d4f29e5-db4f-4539-98f3-bfbc6b3a7199)
+
+![Screenshot_1744716820](https://github.com/user-attachments/assets/754742eb-15ff-41ed-912b-3b4b8af0a1d9)
+
+
