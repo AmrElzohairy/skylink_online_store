@@ -70,18 +70,13 @@ Structured into three main layers
 ### **Screen shots**
 
 
-file:///home/amr-elzohairy/Downloads/Telegram%20Desktop/photo_2025-04-14_18-26-45.jpg
+<img src="https://github.com/user-attachments/assets/dbc36b26-dbdd-407f-81c6-7687c1f53ee2" width="300" style="margin-right: 10px;" />
+<img src="https://github.com/user-attachments/assets/e8f227db-f631-4f29-a97c-8147646c0c1d" width="300" style="margin-right: 10px;" />
+<img src="https://github.com/user-attachments/assets/e0ba9f49-2c9a-470b-95e0-24973d54f2b2" width="300" style="margin-right: 10px;" />
+<img src="https://github.com/user-attachments/assets/6309fc46-cfca-4b8b-8485-6e12a29f4b56" width="300" style="margin-right: 10px;" />
+<img src="https://github.com/user-attachments/assets/1d4f29e5-db4f-4539-98f3-bfbc6b3a7199" width="300" style="margin-right: 10px;" />
+<img src="https://github.com/user-attachments/assets/754742eb-15ff-41ed-912b-3b4b8af0a1d9" width="300" />
 
-![photo_2025-04-14_18-24-01](https://github.com/user-attachments/assets/dbc36b26-dbdd-407f-81c6-7687c1f53ee2) 
 
-![photo_2025-04-14_18-23-59](https://github.com/user-attachments/assets/e8f227db-f631-4f29-a97c-8147646c0c1d)
-
-![photo_2025-04-14_18-23-57](https://github.com/user-attachments/assets/e0ba9f49-2c9a-470b-95e0-24973d54f2b2)
-
-![photo_2025-04-14_18-23-56](https://github.com/user-attachments/assets/6309fc46-cfca-4b8b-8485-6e12a29f4b56)
-
-![photo_2025-04-14_18-23-54](https://github.com/user-attachments/assets/1d4f29e5-db4f-4539-98f3-bfbc6b3a7199)
-
-![Screenshot_1744716820](https://github.com/user-attachments/assets/754742eb-15ff-41ed-912b-3b4b8af0a1d9)
 
 
