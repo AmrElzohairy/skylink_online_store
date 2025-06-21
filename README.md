@@ -1,4 +1,4 @@
-# 📱Rika-Store
+# 📱SkyLink-online-Store
 
 This app demonstrates basic authentication and product listing features using clean architecture principles.
 
